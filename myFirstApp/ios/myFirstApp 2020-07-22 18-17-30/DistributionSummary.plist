@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>myFirstApp.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>C966BC33B7770C0DE5E4C179337EBA4847B4F31A</string>
+				<key>dateExpires</key>
+				<string>22/07/2021</string>
+				<key>type</key>
+				<string>Apple Development</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>HQ6CGYLV6L.com.gamechefs.vs</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>HQ6CGYLV6L</string>
+				<key>get-task-allow</key>
+				<true/>
+				<key>keychain-access-groups</key>
+				<array>
+					<string>HQ6CGYLV6L.com.gamechefs.vs</string>
+				</array>
+			</dict>
+			<key>name</key>
+			<string>myFirstApp.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>fb80c325-ba9f-4552-bd00-4ce290989dac</string>
+				<key>name</key>
+				<string>iOS Team Provisioning Profile: com.gamechefs.vs</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>HQ6CGYLV6L</string>
+				<key>name</key>
+				<string>Game Chefs LLC</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
