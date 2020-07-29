@@ -36,7 +36,6 @@ steps:
 - task: InstallAppleCertificate@2
   inputs:
     certSecureFile: 'AppleDistribution_GameChefsLLC.p12'
-    certPwd: '@Gamechefs!1'
     keychain: 'temp'
   displayName: Install Apple Certificate
   
