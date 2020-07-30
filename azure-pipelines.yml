@@ -43,16 +43,7 @@ steps:
 - script:
     cd myFirstApp
     cd ios
-    bundle install
-    fastlane build
+    build_app("myFirstApp")
+    fastlane beta
   displayName: 'Build iOS'
 
-- task: AppStoreRelease@1
-  inputs:
-    authType: 'UserAndPass'
-    username: 'shanzaygauhar1998@gmail.com'
-    password: $(passApp)
-    appIdentifier: 'com.gamechefs.vs'
-    appType: 'iOS'
-    ipaPath: '**/*.ipa'
-    releaseTrack: 'TestFlight'
