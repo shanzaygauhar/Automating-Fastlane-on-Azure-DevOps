@@ -41,8 +41,6 @@ steps:
   displayName: 'Install Apple Provisioning Profile'
 
 - script:
-    cd myFirstApp
-    cd ios
     build_app("myFirstApp")
     fastlane beta
   displayName: 'Build iOS'
