@@ -44,5 +44,5 @@ steps:
     cd myFirstApp
     cd ios
     fastlane init
-    fastlane run build_app 
+    fastlane ios beta
   displayName: 'Build iOS'
