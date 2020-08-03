@@ -44,6 +44,5 @@ steps:
     cd myFirstApp
     cd ios
     fastlane init
-    bundle install --deployment
-    fastlane build
+    build_app(scheme: "myFirstApp", workspace: "myFirstApp.xcworkspace",include_bitcode: false,output_directory: "output", output_name: "ios_build")
   displayName: 'Build iOS'
