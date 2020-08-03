@@ -44,5 +44,5 @@ steps:
     cd myFirstApp
     cd ios
     fastlane init
-    fastlane gym
+    fastlane run build_app 
   displayName: 'Build iOS'
