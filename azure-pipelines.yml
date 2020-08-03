@@ -44,5 +44,5 @@ steps:
     cd myFirstApp
     cd ios
     fastlane init
-    build_app(scheme: "myFirstApp", workspace: "myFirstApp.xcworkspace",include_bitcode: false,output_directory: "output", output_name: "ios_build")
+    fastlane gym
   displayName: 'Build iOS'
