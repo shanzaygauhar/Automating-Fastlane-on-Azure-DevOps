@@ -9,6 +9,7 @@ trigger:
 pool:
   vmImage: 'macOS 10.14'
 
+
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
@@ -18,6 +19,9 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
+- task: UseRubyVersion@0
+  inputs:
+    versionSpec: '>= 2.4'
 
 - task: NodeAndNpmTool@1
   inputs:
@@ -43,8 +47,12 @@ steps:
 - script:
     cd myFirstApp
     cd ios
-    fastlane beta
+    xcode-select --install
+    bundle install
+    bundle exec fastlane beta
   displayName: 'Build iOS'
+
+
 
 - task: AppStoreRelease@1
   inputs:
