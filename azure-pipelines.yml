@@ -19,9 +19,6 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-- task: UseRubyVersion@0
-  inputs:
-    versionSpec: '>= 2.4'
 
 - task: NodeAndNpmTool@1
   inputs:
@@ -60,6 +57,7 @@ steps:
     script: |
       cd myFirstApp
       cd ios
+      bundle update --bundler
       bundle exec fastlane beta
   displayName: 'ipa generation'
   
