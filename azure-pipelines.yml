@@ -45,7 +45,8 @@ steps:
   displayName: 'Install Apple Provisioning Profile'
 
 - script:
-    cd myFirstApp
+    cd myFirstApp'
+    npm install
     cd ios
     xcode-select --install
     bundle install
@@ -54,14 +55,14 @@ steps:
 
 
 
-- task: AppStoreRelease@1
-  inputs:
-    authType: 'UserAndPass'
-    username: 'shanzaygauhar1998@gmail.com'
-    password: '$(passApp)'
-    appIdentifier: 'com.gamechefs.vs'
-    appType: 'iOS'
-    ipaPath: '**/*.ipa'
-    releaseTrack: 'TestFlight'
-    fastlaneArguments: 'fastlane beta'
-  displayName: 'B'
+#- task: AppStoreRelease@1
+#  inputs:
+#    authType: 'UserAndPass'
+#    username: 'shanzaygauhar1998@gmail.com'
+#    password: '$(passApp)'
+#    appIdentifier: 'com.gamechefs.vs'
+#    appType: 'iOS'
+#    ipaPath: '**/*.ipa'
+#    releaseTrack: 'TestFlight'
+    #fastlaneArguments: 'fastlane beta'
+  #displayName: 'B'
