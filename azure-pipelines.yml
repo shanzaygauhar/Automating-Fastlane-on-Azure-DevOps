@@ -48,7 +48,7 @@ steps:
     script: |
       cd myFirstApp
       cd android
-      fastlane init
+     
   displayName: 'android'
 - task: Bash@3
   inputs:
