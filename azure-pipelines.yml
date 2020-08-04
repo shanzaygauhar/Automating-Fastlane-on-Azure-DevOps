@@ -41,26 +41,26 @@ steps:
     provProfileSecureFile: '[PROD]_Village_Samura.mobileprovision'
   displayName: 'Install Apple Provisioning Profile'
 
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: |
-      cd myFirstApp
-      cd ios
-      gem install bundler
-      
-  displayName: 'iOS built'
 
 - task: Bash@3
   inputs:
     targetType: 'inline'
     script: |
       cd myFirstApp
+      cd android
+      fastlane init
+  displayName: 'android'
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      cd myFirstApp
       cd ios
-      bundle update --bundler
-      bundle exec fastlane beta
-  displayName: 'ipa generation'
-  
+      fastlane beta
+      
+  displayName: 'iOS built'
+
+
   
 - task: CopyPublishBuildArtifacts@1
   inputs:
