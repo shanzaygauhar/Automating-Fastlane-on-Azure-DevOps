@@ -12,8 +12,8 @@ pool:
 steps:
 - task: Gradle@2
   inputs:
-    gradleWrapperFile: 'myFirstApp/android/gradlew'
-    workingDirectory: 'myFirstApp/android'
+    gradleWrapperFile: 'Learning/myFirstApp/android/gradlew'
+    workingDirectory: 'Learning/myFirstApp/android'
     tasks: 'assembleRelease'
     publishJUnitResults: false
     javaHomeOption: 'JDKVersion'
