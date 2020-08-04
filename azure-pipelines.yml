@@ -51,13 +51,18 @@ steps:
       cd myFirstApp
       npm install
       cd ios
-      xcode-select --install
+      gem install bundler
       bundle install
       bundle exec fastlane beta
   displayName: 'iOS built'
 
 
-
+- task: CopyPublishBuildArtifacts@1
+  inputs:
+    Contents: '**/*.ipa'
+    ArtifactName: 'BuiltIPA'
+    ArtifactType: 'FilePath'
+  displayName: 'ipa store'
 #- task: AppStoreRelease@1
 #  inputs:
 #    authType: 'UserAndPass'
