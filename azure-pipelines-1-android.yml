@@ -1,0 +1,22 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'macOS-10.14'
+
+steps:
+- task: Gradle@2
+  inputs:
+    gradleWrapperFile: 'myFirstApp/android/gradlew'
+    workingDirectory: 'myFirstApp/android'
+    tasks: 'assembleRelease'
+    publishJUnitResults: false
+    javaHomeOption: 'JDKVersion'
+    sonarQubeRunAnalysis: false
+  displayName: 'Gradle'
+
