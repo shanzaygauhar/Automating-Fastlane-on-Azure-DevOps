@@ -43,6 +43,7 @@ steps:
 - script:
     cd myFirstApp
     cd ios
+    fastlane beta
   displayName: 'Build iOS'
 
 - task: AppStoreRelease@1
