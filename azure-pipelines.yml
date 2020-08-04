@@ -46,7 +46,6 @@ steps:
 
 - script:
     cd myFirstApp'
-    npm install
     cd ios
     xcode-select --install
     bundle install
