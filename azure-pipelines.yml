@@ -43,5 +43,16 @@ steps:
 - script:
     cd myFirstApp
     cd ios
-    fastlane beta
   displayName: 'Build iOS'
+
+- task: AppStoreRelease@1
+  inputs:
+    authType: 'UserAndPass'
+    username: 'shanzaygauhar1998@gmail.com'
+    password: '$(passApp)'
+    appIdentifier: 'com.gamechefs.vs'
+    appType: 'iOS'
+    ipaPath: '**/*.ipa'
+    releaseTrack: 'TestFlight'
+    fastlaneArguments: 'fastlane beta'
+  displayName: 'B'
