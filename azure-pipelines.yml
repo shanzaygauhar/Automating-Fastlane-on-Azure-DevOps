@@ -54,7 +54,12 @@ steps:
       
   displayName: 'iOS built'
 
-
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: 'bundle exec fastlane beta'
+  displayName: 'ipa generation'
+  
 - task: CopyPublishBuildArtifacts@1
   inputs:
     Contents: '**/*.ipa'
