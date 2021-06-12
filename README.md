@@ -1,3 +1,7 @@
+# Fastlane and Azure DevOps
+
+This project cannot be exactly cloned and executed. It demands certain settings to be made and certain variables to be set. Read the pdf attached and README.md file.
+
 **FASTLANE IOS BUILD AND AZURE DEVOPS**
 
 **DOCUMENTATION BY:**
